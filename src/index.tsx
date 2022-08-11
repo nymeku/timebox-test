@@ -2,10 +2,16 @@ import React from "react"
 import ReactDOM from "react-dom/client"
 import "./index.css"
 import App from "./App"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Sheet from "./views/Sheet/sheet"
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement)
 root.render(
 	<React.StrictMode>
-		<App />
+		<BrowserRouter>
+			<Routes>
+				<Route index element={<Sheet />} />
+			</Routes>
+		</BrowserRouter>
 	</React.StrictMode>
 )
